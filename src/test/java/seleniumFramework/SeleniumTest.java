@@ -1,5 +1,6 @@
 package seleniumFramework;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,6 +13,7 @@ public class SeleniumTest {
 		WebDriverManager.chromedriver().browserVersion("2.36").setup();
 		WebDriver driver = new ChromeDriver();
         driver.get("https://www.safaricom.co.ke/");
+        driver.findElement(By.className("fa fa-search"));
         driver.quit();
         driver.close();
 	}
